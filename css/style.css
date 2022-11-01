@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+header {
+  padding: 2em;
+  display: flex;
+}
+nav {
+  padding: 2px;
+  flex-grow: 1;
+}
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  color: hsl(0, 0%, 41%);
+}
+.nav__list li:first-child {
+  padding-left: 2rem;
+}
+.nav__list li:nth-of-type(5) {
+  margin-left: auto;
+}
+.nav__list li:last-child {
+  border: 1px solid hsl(0, 0%, 41%);
+  padding: 0.5rem 1rem;
+  margin-top: -0.6rem !important;
+  border-radius: 0.7rem;
+}
+/* main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 9.4rem;
+}
+main > div {
+  flex-basis: 100%;
+}
+.left {
+  align-items: center;
+}
+.left h1 {
+  font-size: 72px;
+}
+.left p,
+.left button {
+  margin-top: 1.5rem;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
+}
+.left button {
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.7rem;
+}
+.partners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 78%;
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+.partners > * {
+  flex-grow: 1;
+}
+.right {
+  height: 100%;
+  width: 100%;
+}
+.right_img {
+  width: 60% !important;
+  height: 82% !important;
+} */
+section {
+  width: 81%;
+  margin: 0 auto;
+}
+main {
+  display: grid;
+  height: 50vh !important;
+  grid-template-areas:
+    "no_content right_img"
+    "make right_img"
+    "paragraph right_img"
+    "button right_img"
+    "partners right_img";
+  gap: 1rem;
+}
+.no_content {
+  grid-area: no_content;
+  height: 4rem;
+}
+.make {
+  grid-area: make;
+  font-size: 72px;
+}
+.right_img {
+  width: 80%;
+  height: 90%;
+  grid-area: right_img;
+}
+.paragraph {
+  grid-area: paragraph;
+  margin-top: 1rem;
+  color: hsl(0, 0%, 41%);
+  line-height: 1.5;
+  width: 50%;
+}
+.button button {
+  grid-area: button;
+  background-color: hsl(0, 0%, 8%);
+  color: hsl(0, 0%, 98%);
+  padding: 0.7rem 1.1rem;
+  margin-top: 1rem;
+  border-radius: 0.7rem;
+}
+.partners {
+  grid-area: partners;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 85%;
+  margin-top: 5rem !important;
+  line-height: 1.5;
+}
+
+.partners > * {
+  flex-grow: 1;
+}
+@media screen and (max-width: 768px) {
+  .nav__list {
+    display: none;
+  }
+  main {
+    width: 100%;
+    grid-template-areas:
+      "button"
+      "right_img"
+      "make"
+      "paragraph"
+      "partners";
+  }
+  .right_img {
+    width: 100%;
+    height: 100%;
+  }
+  .make {
+    font-size: 40px;
+  }
+  .paragraph {
+    text-align: center;
+    line-height: normal;
+  }
+  .partners {
+    width: 100%;
+  }
+}
